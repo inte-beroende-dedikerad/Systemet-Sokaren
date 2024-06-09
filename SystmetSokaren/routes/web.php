@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\apklisting;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [apklisting::class, 'index'])->name('listing');
